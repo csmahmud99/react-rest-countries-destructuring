@@ -11,6 +11,7 @@ const loadCountries = () => {
 const displayCountries = countries => {
     // console.log(countries);
     console.log(countries[0]);
+    console.log(countries[5]);
 
     // Step -3: Getting single countries data one by one by JS Array Map Method
     // const allCountriesHTML = countries.map(country => console.log(country));
@@ -37,6 +38,8 @@ const getCountryHTML = country => {
         <div class="country">
             <h2>${country.name.common}</h2>
             <img src=${country.flags.png} alt="country-flags" />
+            <p><strong>Capital:</strong> ${country.capital}</p>
+            <p><strong>Continent:</strong> ${country.continents}</p>
         </div>
     `
 }
