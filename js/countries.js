@@ -32,6 +32,9 @@ const displayCountries = countries => {
 }
 
 // Step-4: Auxiliary Function for showing the data on the UI
+
+/* 
+// Process 01: Direct data showing method without Destructuring
 const getCountryHTML = country => {
     // console.log(country);
     return `
@@ -42,7 +45,24 @@ const getCountryHTML = country => {
             <p><strong>Continent:</strong> ${country.continents}</p>
         </div>
     `
-}
+} 
+*/
+
+/* 
+// Process 02: Data showing using Destructuring inside the function
+const getCountryHTML = country => {
+    const {name, flags, capital, continents} = country;
+
+    return `
+        <div class="country">
+            <h2>${name.common}</h2>
+            <img src=${flags.png} alt="country-flags" />
+            <p><strong>Capital:</strong> ${capital}</p>
+            <p><strong>Continent:</strong> ${continents}</p>
+        </div>
+    `
+} 
+*/
 
 // Calling the Mother Function
 loadCountries();
