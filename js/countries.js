@@ -64,5 +64,19 @@ const getCountryHTML = country => {
 } 
 */
 
+// Process 03: Data showing using Destructuring inside the parameter 
+// Will use this way most of the time
+const getCountryHTML = ({name, flags, capital, continents}) => {
+    // const {name, flags, capital, continents} = country;
+    return `
+        <div class="country">
+            <h2>${name.common}</h2>
+            <img src=${flags.png} alt="country-flags" />
+            <p><strong>Capital:</strong> ${capital}</p>
+            <p><strong>Continent:</strong> ${continents}</p>
+        </div>
+    `
+} 
+
 // Calling the Mother Function
 loadCountries();
